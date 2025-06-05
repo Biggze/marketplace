@@ -16,7 +16,12 @@
                     <!-- Logo -->
                     <div>
                         <a href="/" class="flex items-center py-4 px-2">
-                            <img src="{{ asset('images/logo.png') }}" alt="Logo" class="h-8 w-8 mr-2">
+                            <!-- Ganti img dengan icon SVG sepatu -->
+                            <span class="bg-green-100 rounded-full p-1 mr-2 flex items-center justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M4 16V8a2 2 0 012-2h12a2 2 0 012 2v8M4 16h16" />
+                                </svg>
+                            </span>
                             <span class="font-semibold text-gray-500 text-lg">ShoeMarket</span>
                         </a>
                     </div>
