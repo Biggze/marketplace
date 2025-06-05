@@ -15,7 +15,7 @@
                 <div class="flex space-x-7">
                     <!-- Logo -->
                     <div>
-                        <a href="/" class="flex items-center py-4 px-2">
+                        <a href="{{ route('user.dashboard') }}" class="flex items-center py-4 px-2">
                             <!-- Ganti img dengan icon SVG sepatu -->
                             <span class="bg-green-100 rounded-full p-1 mr-2 flex items-center justify-center">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -25,13 +25,24 @@
                             <span class="font-semibold text-gray-500 text-lg">ShoeMarket</span>
                         </a>
                     </div>
-                    <!-- Menu Items -->
-                    <div class="hidden md:flex items-center space-x-1">
-                        <a href="/" class="py-4 px-2 text-green-500 border-b-4 border-green-500 font-semibold">Home</a>
-                        <a href="/products" class="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300">Produk</a>
-                        <a href="/about" class="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300">Tentang Kami</a>
-                        <a href="/contact" class="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300">Kontak</a>
-                    </div>
+                 <div class="hidden md:flex items-center space-x-1">
+                            <a href="{{ route('user.dashboard') }}"
+                            class="py-4 px-2 font-semibold {{ Request::is('/dashboard') ? 'text-green-500 border-b-4 border-green-500' : 'text-gray-500 hover:text-green-500 transition duration-300' }}">
+                                Home
+                            </a>
+                            <a href="{{ route('user.product.index') }}"
+                            class="py-4 px-2 font-semibold {{ Request::is('user/products') ? 'text-green-500 border-b-4 border-green-500' : 'text-gray-500 hover:text-green-500 transition duration-300' }}">
+                                Produk
+                            </a>
+                            <a href="/about"
+                            class="py-4 px-2 font-semibold {{ Request::is('about') ? 'text-green-500 border-b-4 border-green-500' : 'text-gray-500 hover:text-green-500 transition duration-300' }}">
+                                Tentang Kami
+                            </a>
+                            <a href="/contact"
+                            class="py-4 px-2 font-semibold {{ Request::is('contact') ? 'text-green-500 border-b-4 border-green-500' : 'text-gray-500 hover:text-green-500 transition duration-300' }}">
+                                Kontak
+                            </a>
+                        </div>
                 </div>
                 <!-- Auth Links -->
                 <div class="hidden md:flex items-center space-x-3">
